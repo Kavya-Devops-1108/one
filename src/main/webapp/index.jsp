@@ -38,8 +38,10 @@
             color: var(--primary);
             background: var(--bg);
             -webkit-font-smoothing: antialiased;
+            color: var(--primary);
             -moz-osx-font-smoothing: grayscale;
             line-height: 1.4;
+            color: var(--primary);
         }
 
         a {

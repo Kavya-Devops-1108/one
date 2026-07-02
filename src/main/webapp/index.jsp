@@ -42,13 +42,10 @@
             line-height: 1.4;
             color: var(--primary);
         }
-        color: var(--primary);
-
         a {
             color: inherit;
             text-decoration: none
         }
-      color: var(--primary);
 
         .container {
             width: 100%;

@@ -16,7 +16,7 @@ stages {
             }
 stage ("nexus" ) {
 steps {
-  nexusArtifactUploader artifacts: [[artifactId: '$artifactid', classifier: '', file: 'target/$artifactid-$version.war', type: 'war']], credentialsId: 'nexus', groupId: '$groupid', nexusUrl: 'http://3.93.47.84:8081/', nexusVersion: 'nexus3', protocol: 'http', repository: 'myrepo', version: '$version'
+  nexusArtifactUploader artifacts: [[artifactId: '${artifactid}', classifier: '', file: 'target/${artifactid}-${version}.war', type: 'war']], credentialsId: 'nexus', groupId: '${groupid}', nexusUrl: '3.93.47.84:8081/', nexusVersion: 'nexus3', protocol: 'http', repository: 'myrepo', version: '$version'
 }
 }
     stage("Package"){

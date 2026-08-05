@@ -24,3 +24,5 @@ steps {
                    deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcat', path: '', url: 'http://54.196.105.89:8080/')], contextPath: 'myapp', war: 'target/*.war'   
                }
               }
+}
+}

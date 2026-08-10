@@ -23,6 +23,13 @@ pipeline {
                sh 'mvn clean package' 
             }
          }
+         stage("cQA"){
+            steps {
+               withSonarQubeEnv("mysona") {
+               sh "mvn clean verify sonar:sonar -Dsonar.projectKey=project"
+                      } 
+                }
+           }
       }
    }
          

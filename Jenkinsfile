@@ -4,6 +4,9 @@ pipeline {
          label 'test'
       }
    }
+   tools {
+      maven 'mymaven' 
+   }
       stages {
          stage"cleanws") {
             steps {
@@ -20,4 +23,6 @@ pipeline {
                sh 'mvn clean package' 
             }
          }
+      }
+   }
          

@@ -8,7 +8,7 @@ pipeline {
       maven 'mymaven' 
    }
       stages {
-         stage"cleanws") {
+         stage("cleanws") {
             steps {
                 cleanWs()
             }

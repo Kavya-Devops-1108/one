@@ -19,9 +19,8 @@ stages {
                          withSonarQubeEnv("mysona") {
                             sh "mvn clean verify sonar:sonar -Dsonar.projectKey=myproj"
                                }
-
                  }
-}
+    }
   stage("quality gate") {
         steps {
                 waitForQualityGate abortPipeline: true, credentialsId: 'sonarqube'

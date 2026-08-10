@@ -6,7 +6,7 @@ tools {
 stages {
    stage("Code") {
           steps {
-                 sh 'https://github.com/Kavya-Devops-1108/one.git'
+                 git 'https://github.com/Kavya-Devops-1108/one.git'
                  }
               }
    stage("Build") {

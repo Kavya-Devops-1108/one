@@ -35,6 +35,22 @@ pipeline {
                waitForQualityGate abortPipeline: true, credentialsId: 'sonarqube'
             }
          }
+         stage("docker Image") {
+            steps {
+                sh 'docker build -t myimage .'
+            }
+         }
+         stage("Image Scan") {
+            steps {
+                sh 'trivy image myimage'
+            }
+         }
+         stage("REgistry") {
+            steps {
+               sh 'docker tag myimage kavya318506/practice'
+               sh 'docker push kavya318506/practice'
+            }
+         }
       }
    }
          

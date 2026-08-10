@@ -16,7 +16,7 @@ stages {
                     }
    stage ("CQA") {
                   steps {
-                         withSonarQubeEnv("mysona") {
+                         withSonarQubeEnv("sonarqube") {
                             sh "mvn clean verify sonar:sonar -Dsonar.projectKey=myproj"
                                }
 

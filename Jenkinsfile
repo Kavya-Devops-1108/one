@@ -47,8 +47,10 @@ pipeline {
          }
          stage("REgistry") {
             steps {
-               sh 'docker tag myimage kavya318506/practice'
-               sh 'docker push kavya318506/practice'
+               withDockerRegistry(credentialsId: 'dockerhub') {
+                          sh 'docker tag myimage kavya318506/practice'
+                          sh 'docker push kavya318506/practice'
+                  }
             }
          }
       }
